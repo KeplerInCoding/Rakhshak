@@ -8,7 +8,6 @@ import {
   MapIcon,
   PhoneIcon,
   LifebuoyIcon,
-  HashtagIcon,
 } from '@heroicons/react/24/outline';
 
 const sidebarLinks = [
@@ -20,7 +19,6 @@ const sidebarLinks = [
   { name: 'Red Zones Management', path: '/red-zones', icon: MapIcon },
   { name: 'Manage Emergency Contacts', path: '/emergency-contacts', icon: PhoneIcon },
   { name: 'Manage Emergency Services', path: '/emergency-services', icon: LifebuoyIcon },
-  { name: 'Social Media Scan', path: '/social-media-scan', icon: HashtagIcon },
 ];
 
 const Sidebar = () => {

@@ -12,7 +12,6 @@ import ManageLostFound from './pages/ManageLostFound';
 import RedZones from './pages/RedZones';
 import EmergencyContacts from './pages/EmergencyContacts';
 import EmergencyServices from './pages/EmergencyServices';
-import SocialMediaScan from './pages/SocialMediaScan';
 import SOS from './pages/SOSlog';
 import AdminLog from './pages/AdminLog';
 import Alerts from './pages/Alerts';
@@ -34,7 +33,6 @@ function App() {
             <Route path="/red-zones" element={<RedZones />} />
             <Route path="/emergency-contacts" element={<EmergencyContacts />} />
             <Route path="/emergency-services" element={<EmergencyServices />} />
-            <Route path="/social-media-scan" element={<SocialMediaScan />} />
             <Route path="/sos" element={<SOS />} />
             <Route path="/admin-log" element={<AdminLog />} />
             <Route path="/alerts" element={<Alerts />} />
