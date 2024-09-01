@@ -10,13 +10,13 @@ const Home = () => {
         </p>
       </div>
       <div className="border rounded-lg overflow-hidden shadow-lg">
-        {/* <iframe
+        <iframe
           src="https://rsoe-edis.org/eventMap"
           title="Real-time Weather Information"
           width="100%"
           height="600px"
           frameBorder="0"
-        ></iframe> */}
+        ></iframe>
       </div>
     </div>
   );

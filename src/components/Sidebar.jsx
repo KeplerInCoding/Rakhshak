@@ -25,7 +25,7 @@ const sidebarLinks = [
 
 const Sidebar = () => {
   return (
-    <div className="w-64 h-screen fixed top-5 left-0 bg-white border-r border-gray-200 shadow-sm overflow-y-auto">
+    <div className="w-64 h-screen fixed top-8 left-0 bg-white border-r border-gray-200 shadow-sm overflow-y-auto">
       <nav className="mt-10">
         {sidebarLinks.map((link) => (
           <NavLink

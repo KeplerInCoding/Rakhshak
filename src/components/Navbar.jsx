@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="flex space-x-4">
             <Link to="/sos" className="flex items-center text-gray-700 hover:text-primary transition">
               <ExclamationTriangleIcon className="h-6 w-6 mr-1" />
-              SOS
+              SOS Requests
             </Link>
             <Link to="/admin-log" className="flex items-center text-gray-700 hover:text-primary transition">
               <DocumentTextIcon className="h-6 w-6 mr-1" />
