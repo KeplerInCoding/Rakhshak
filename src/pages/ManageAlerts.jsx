@@ -9,6 +9,7 @@ const initialAlerts = [
     percentage: 80,
     detailsUrl: 'https://example.com/cyclone-details',
     status: 'sent', // added status field
+    dateAdded: new Date().toLocaleDateString(), // current date as date added
   },
   {
     id: 2,
@@ -18,8 +19,9 @@ const initialAlerts = [
     percentage: 70,
     detailsUrl: 'https://example.com/flood-details',
     status: 'sent', // added status field
+    dateAdded: new Date().toLocaleDateString(), // current date as date added
   },
-  // ... other alerts
+  // ... other initial alerts
 ];
 
 const ManageAlerts = () => {
@@ -82,7 +84,12 @@ const ManageAlerts = () => {
       ));
     } else {
       // Add new alert
-      const newAlert = { id: Date.now(), ...form, status: 'sent' };
+      const newAlert = {
+        id: Date.now(),
+        ...form,
+        status: 'sent',
+        dateAdded: new Date().toLocaleDateString(), // set date added
+      };
       setAlerts([...alerts, newAlert]);
     }
     setIsModalOpen(false);
@@ -99,14 +106,14 @@ const ManageAlerts = () => {
 
         <button
           onClick={handleSendClick}
-          className="px-4 py-2 bg-blue-500 text-white text-lg font-semibold rounded-lg shadow-lg mb-6"
+          className="px-4 py-2 bg-orange-500 text-white text-lg font-semibold rounded-lg shadow-lg ml-0 m-6"
         >
           Send New Alert
         </button>
 
         <button
           onClick={handleViewHistoryToggle}
-          className="px-4 py-2 bg-green-500 text-white text-lg font-semibold rounded-lg shadow-lg mb-6"
+          className="px-4 py-2 bg-green-500 text-white text-lg font-semibold rounded-lg shadow-lg m-6"
         >
           {viewHistory ? 'View Current Alerts' : 'View Alert History'}
         </button>
@@ -121,8 +128,9 @@ const ManageAlerts = () => {
                     <h3 className="text-xl font-medium text-gray-800">{alert.name}</h3>
                     <p className="text-gray-600"><strong>Place:</strong> {alert.place}</p>
                     <p className="text-gray-600"><strong>Predicted Time:</strong> {alert.predictedTime}</p>
-                    <p className="text-gray-600"><strong>Percentage:</strong> {alert.percentage}%</p>
-                    <a href={alert.detailsUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">More Details</a>
+                    <p className="text-gray-600"><strong>Likelihood:</strong> {alert.percentage}%</p>
+                    <p className="text-gray-600"><strong>Date Added:</strong> {alert.dateAdded}</p>
+                    <a href={alert.detailsUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline mt-2">More Details</a>
                     <div className="mt-4 flex space-x-2">
                       {/* Disable edit and delete for sent alerts */}
                       {alert.status !== 'sent' && (
@@ -227,9 +235,9 @@ const ManageAlerts = () => {
                   </button>
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                    className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
                   >
-                    {currentAlert ? 'Save Changes' : 'Send Alert'}
+                    {currentAlert ? 'Update Alert' : 'Send Alert'}
                   </button>
                 </div>
               </form>

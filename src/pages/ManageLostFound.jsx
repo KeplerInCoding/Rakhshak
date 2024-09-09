@@ -139,179 +139,172 @@ const ManageLostFound = () => {
       <div className="container mx-auto">
         <h1 className="text-3xl font-bold text-gray-800 mb-6">Manage Lost and Found</h1>
 
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Lost People</h2>
-          <button
-            onClick={() => handleAddClick()}
-            className="px-4 py-2 bg-blue-500 text-white text-lg font-semibold rounded-lg shadow-lg mb-6"
-          >
-            Add Lost Person
-          </button>
-          {lostPeople.length > 0 ? (
-            <ul className="space-y-4">
-              {lostPeople.map(person => (
-                <li key={person.id} className="bg-white shadow-md rounded-lg p-4 border border-gray-200 flex items-center">
-                  <img src={person.pictureUrl} alt={person.name} className="w-24 h-24 object-cover rounded-full mr-4" />
-                  <div className="flex-1">
-                    <h3 className="text-xl font-medium text-gray-800">{person.name}</h3>
-                    <p className="text-gray-600"><strong>Last Seen:</strong> {person.lastSeen}</p>
-                    <p className="text-gray-600"><strong>Place:</strong> {person.place}</p>
-                    <p className="text-gray-600"><strong>Description:</strong> {person.description}</p>
-                    <p className="text-gray-600"><strong>Contact:</strong> {person.contact}</p>
-                    <div className="mt-4 flex space-x-2">
-                      <button
-                        onClick={() => handleEditClick(person)}
-                        className="px-3 py-1 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"
-                      >
-                        Edit
-                      </button>
-                      <button
-                        onClick={() => handleDeleteClick(person.id, 'lost')}
-                        className="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600"
-                      >
-                        Delete
-                      </button>
+        <div className="flex gap-20 justify-between mb-12">
+          <div className="w-full max-w-md">
+            <h2 className="text-2xl font-semibold text-gray-700 mb-4">Lost People</h2>
+            <button
+              onClick={() => handleAddClick()}
+              className="px-4 py-2 bg-orange-500 text-white text-lg font-semibold rounded-lg shadow-lg mb-6"
+            >
+              Add Lost Person
+            </button>
+            {lostPeople.length > 0 ? (
+              <ul className="space-y-4">
+                {lostPeople.map(person => (
+                  <li key={person.id} className="bg-white shadow-md rounded-lg p-4 border border-gray-200 flex items-center">
+                    <img src={person.pictureUrl} alt={person.name} className="w-24 h-24 object-cover rounded-full mr-4" />
+                    <div className="flex-1">
+                      <h3 className="text-xl font-medium text-gray-800">{person.name}</h3>
+                      <p className="text-gray-600"><strong>Last Seen:</strong> {person.lastSeen}</p>
+                      <p className="text-gray-600"><strong>Place:</strong> {person.place}</p>
+                      <p className="text-gray-600"><strong>Description:</strong> {person.description}</p>
+                      <p className="text-gray-600"><strong>Contact:</strong> {person.contact}</p>
+                      <div className="mt-4 flex space-x-2">
+                        <button
+                          onClick={() => handleEditClick(person)}
+                          className="px-3 py-1 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={() => handleDeleteClick(person.id, 'lost')}
+                          className="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-gray-600">No lost people reported.</p>
-          )}
-        </div>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-gray-600">No lost people reported.</p>
+            )}
+          </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Found People</h2>
-          <button
-            onClick={() => handleAddClick()}
-            className="px-4 py-2 bg-blue-500 text-white text-lg font-semibold rounded-lg shadow-lg mb-6"
-          >
-            Add Found Person
-          </button>
-          {foundPeople.length > 0 ? (
-            <ul className="space-y-4">
-              {foundPeople.map(person => (
-                <li key={person.id} className="bg-white shadow-md rounded-lg p-4 border border-gray-200 flex items-center">
-                  <img src={person.pictureUrl} alt={person.name} className="w-24 h-24 object-cover rounded-full mr-4" />
-                  <div className="flex-1">
-                    <h3 className="text-xl font-medium text-gray-800">{person.name}</h3>
-                    <p className="text-gray-600"><strong>Found At:</strong> {person.foundAt}</p>
-                    <p className="text-gray-600"><strong>Place:</strong> {person.place}</p>
-                    <p className="text-gray-600"><strong>Description:</strong> {person.description}</p>
-                    <p className="text-gray-600"><strong>Contact:</strong> {person.contact}</p>
-                    <div className="mt-4 flex space-x-2">
-                      <button
-                        onClick={() => handleEditClick(person)}
-                        className="px-3 py-1 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"
-                      >
-                        Edit
-                      </button>
-                      <button
-                        onClick={() => handleDeleteClick(person.id, 'found')}
-                        className="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600"
-                      >
-                        Delete
-                      </button>
+          <div className="w-full max-w-md">
+            <h2 className="text-2xl font-semibold text-gray-700 mb-4">Found People</h2>
+            <button
+              onClick={() => handleAddClick()}
+              className="px-4 py-2 bg-orange-500 text-white text-lg font-semibold rounded-lg shadow-lg mb-6"
+            >
+              Add Found Person
+            </button>
+            {foundPeople.length > 0 ? (
+              <ul className="space-y-4">
+                {foundPeople.map(person => (
+                  <li key={person.id} className="bg-white shadow-md rounded-lg p-4 border border-gray-200 flex items-center">
+                    <img src={person.pictureUrl} alt={person.name} className="w-24 h-24 object-cover rounded-full mr-4" />
+                    <div className="flex-1">
+                      <h3 className="text-xl font-medium text-gray-800">{person.name}</h3>
+                      <p className="text-gray-600"><strong>Found At:</strong> {person.foundAt}</p>
+                      <p className="text-gray-600"><strong>Place:</strong> {person.place}</p>
+                      <p className="text-gray-600"><strong>Description:</strong> {person.description}</p>
+                      <p className="text-gray-600"><strong>Contact:</strong> {person.contact}</p>
+                      <div className="mt-4 flex space-x-2">
+                        <button
+                          onClick={() => handleEditClick(person)}
+                          className="px-3 py-1 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={() => handleDeleteClick(person.id, 'found')}
+                          className="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-gray-600">No found people reported.</p>
-          )}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-gray-600">No found people reported.</p>
+            )}
+          </div>
         </div>
 
         {isModalOpen && (
-          <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-              <h2 className="text-2xl font-semibold mb-4">{currentPerson ? 'Edit' : 'Add'} Person</h2>
+          <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+              <h2 className="text-2xl font-semibold mb-4">{currentPerson ? 'Edit Person' : 'Add Person'}</h2>
               <form onSubmit={handleFormSubmit}>
                 <div className="mb-4">
-                  <label htmlFor="name" className="block text-gray-700">Name</label>
+                  <label className="block text-gray-700">Name</label>
                   <input
-                    id="name"
-                    name="name"
                     type="text"
+                    name="name"
                     value={form.name}
                     onChange={handleFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
                     required
                   />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="lastSeen" className="block text-gray-700">Last Seen</label>
+                  <label className="block text-gray-700">Last Seen / Found At</label>
                   <input
-                    id="lastSeen"
-                    name="lastSeen"
                     type="datetime-local"
+                    name="lastSeen"
                     value={form.lastSeen}
                     onChange={handleFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
                     required={!form.foundAt}
                   />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="foundAt" className="block text-gray-700">Found At</label>
                   <input
-                    id="foundAt"
-                    name="foundAt"
                     type="datetime-local"
+                    name="foundAt"
                     value={form.foundAt}
                     onChange={handleFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
                     required={!!form.foundAt}
                   />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="place" className="block text-gray-700">Place</label>
+                  <label className="block text-gray-700">Place</label>
                   <input
-                    id="place"
-                    name="place"
                     type="text"
+                    name="place"
                     value={form.place}
                     onChange={handleFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
                     required
                   />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="description" className="block text-gray-700">Description</label>
+                  <label className="block text-gray-700">Description</label>
                   <textarea
-                    id="description"
                     name="description"
                     value={form.description}
                     onChange={handleFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg"
                     rows="3"
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
                     required
-                  ></textarea>
+                  />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="contact" className="block text-gray-700">Contact</label>
+                  <label className="block text-gray-700">Contact</label>
                   <input
-                    id="contact"
-                    name="contact"
                     type="text"
+                    name="contact"
                     value={form.contact}
                     onChange={handleFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
                     required
                   />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="pictureUrl" className="block text-gray-700">Picture URL</label>
+                  <label className="block text-gray-700">Picture URL</label>
                   <input
-                    id="pictureUrl"
-                    name="pictureUrl"
                     type="text"
+                    name="pictureUrl"
                     value={form.pictureUrl}
                     onChange={handleFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
+                    required
                   />
                 </div>
-                <div className="flex justify-end space-x-2">
+                <div className="flex justify-end space-x-4">
                   <button
                     type="button"
                     onClick={() => setIsModalOpen(false)}
@@ -321,7 +314,7 @@ const ManageLostFound = () => {
                   </button>
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                    className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
                   >
                     Save
                   </button>

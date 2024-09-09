@@ -9,9 +9,7 @@ import Dashboard2 from './pages/Dashboard2';
 import ManageAlerts from './pages/ManageAlerts';
 import ManageGuidelines from './pages/ManageGuidelines';
 import ManageLostFound from './pages/ManageLostFound';
-import RedZones from './pages/RedZones';
 import EmergencyContacts from './pages/EmergencyContacts';
-import EmergencyServices from './pages/EmergencyServices';
 import SOS from './pages/SOSlog';
 import AdminLog from './pages/AdminLog';
 import Alerts from './pages/Alerts';
@@ -30,9 +28,7 @@ function App() {
             <Route path="/manage-alerts" element={<ManageAlerts />} />
             <Route path="/manage-guidelines" element={<ManageGuidelines />} />
             <Route path="/manage-lost-found" element={<ManageLostFound />} />
-            <Route path="/red-zones" element={<RedZones />} />
             <Route path="/emergency-contacts" element={<EmergencyContacts />} />
-            <Route path="/emergency-services" element={<EmergencyServices />} />
             <Route path="/sos" element={<SOS />} />
             <Route path="/admin-log" element={<AdminLog />} />
             <Route path="/alerts" element={<Alerts />} />

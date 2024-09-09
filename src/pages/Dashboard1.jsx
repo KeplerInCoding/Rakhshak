@@ -1,5 +1,7 @@
 // import React from 'react';
 import dash from "../images/Dashboard1.png"
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 const Dashboard1 = () => {
   return (

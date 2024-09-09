@@ -5,9 +5,7 @@ import {
   ExclamationTriangleIcon,
   MegaphoneIcon,
   MagnifyingGlassIcon,
-  MapIcon,
   PhoneIcon,
-  LifebuoyIcon,
 } from '@heroicons/react/24/outline';
 
 const sidebarLinks = [
@@ -16,9 +14,7 @@ const sidebarLinks = [
   { name: 'Manage Alerts', path: '/manage-alerts', icon: ExclamationTriangleIcon },
   { name: 'Manage Guidelines and Announcements', path: '/manage-guidelines', icon: MegaphoneIcon },
   { name: 'Manage Lost and Found', path: '/manage-lost-found', icon: MagnifyingGlassIcon },
-  { name: 'Red Zones Management', path: '/red-zones', icon: MapIcon },
-  { name: 'Manage Emergency Contacts', path: '/emergency-contacts', icon: PhoneIcon },
-  { name: 'Manage Emergency Services', path: '/emergency-services', icon: LifebuoyIcon },
+  { name: 'Manage Emergency Contacts', path: '/emergency-contacts', icon: PhoneIcon }
 ];
 
 const Sidebar = () => {
