@@ -6,10 +6,11 @@ import {
   DocumentChartBarIcon,
   PuzzlePieceIcon,
   ShieldCheckIcon,
-  UploadIcon,
-  SatelliteIcon,
+  GlobeAltIcon, // Replacing UploadIcon
   MegaphoneIcon,
+  ArrowUpTrayIcon, // Alternative for Upload
 } from '@heroicons/react/24/outline';
+
 
 
 const sidebarLinks = [
@@ -20,8 +21,8 @@ const sidebarLinks = [
   { name: 'Manage Guidelines and Announcements', path: '/manage-guidelines', icon: MegaphoneIcon },
   { name: 'Manage Lost and Found', path: '/manage-lost-found', icon: PuzzlePieceIcon },
   { name: 'Manage Emergency Contacts', path: '/emergency-contacts', icon: ShieldCheckIcon },
-  { name: 'Upload Data - After Disaster', path: '/upload-data', icon: UploadIcon },
-  { name: 'Satellite Scan', path: '/satellite-scan', icon: SatelliteIcon }
+  { name: 'Upload Data - After Disaster', path: '/upload-data', icon: ArrowUpTrayIcon },
+  { name: 'Satellite Scan', path: '/satellite-scan', icon: GlobeAltIcon }
 ];
 
 
