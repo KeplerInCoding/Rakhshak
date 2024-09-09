@@ -3,19 +3,28 @@ import {
   ChartBarIcon,
   CloudIcon,
   ExclamationTriangleIcon,
+  DocumentChartBarIcon,
+  PuzzlePieceIcon,
+  ShieldCheckIcon,
+  UploadIcon,
+  SatelliteIcon,
   MegaphoneIcon,
-  MagnifyingGlassIcon,
-  PhoneIcon,
 } from '@heroicons/react/24/outline';
+
 
 const sidebarLinks = [
   { name: 'Dashboard Analysis', path: '/dashboard-1', icon: ChartBarIcon },
   { name: 'Current Conditions', path: '/dashboard-2', icon: CloudIcon },
-  { name: 'Manage Alerts', path: '/manage-alerts', icon: ExclamationTriangleIcon },
+  { name: 'Alerts to Public', path: '/alerts', icon: ExclamationTriangleIcon },
+  { name: 'Verify ML Alerts', path: '/verify-ml-alerts', icon: DocumentChartBarIcon },
   { name: 'Manage Guidelines and Announcements', path: '/manage-guidelines', icon: MegaphoneIcon },
-  { name: 'Manage Lost and Found', path: '/manage-lost-found', icon: MagnifyingGlassIcon },
-  { name: 'Manage Emergency Contacts', path: '/emergency-contacts', icon: PhoneIcon }
+  { name: 'Manage Lost and Found', path: '/manage-lost-found', icon: PuzzlePieceIcon },
+  { name: 'Manage Emergency Contacts', path: '/emergency-contacts', icon: ShieldCheckIcon },
+  { name: 'Upload Data - After Disaster', path: '/upload-data', icon: UploadIcon },
+  { name: 'Satellite Scan', path: '/satellite-scan', icon: SatelliteIcon }
 ];
+
+
 
 const Sidebar = () => {
   return (

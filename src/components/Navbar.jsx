@@ -20,7 +20,7 @@ const Navbar = () => {
             </Link>
             <Link to="/alerts" className="flex items-center text-gray-700 hover:text-primary transition">
               <BellIcon className="h-6 w-6 mr-1" />
-              Alerts
+              Alerts from ML
             </Link>
           </div>
         </div>

@@ -13,6 +13,9 @@ import EmergencyContacts from './pages/EmergencyContacts';
 import SOS from './pages/SOSlog';
 import AdminLog from './pages/AdminLog';
 import Alerts from './pages/Alerts';
+import SatelliteScan from './pages/SatelliteScan';
+import UploadData from './pages/UploadData';
+import VerifyMLAlerts from './pages/VerifyMLAlerts';
 
 function App() {
   return (
@@ -21,18 +24,22 @@ function App() {
         <Navbar />
         <Sidebar />
         <div className="ml-64 mt-16 p-4 bg-gray-50 min-h-screen">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/dashboard-1" element={<Dashboard1 />} />
-            <Route path="/dashboard-2" element={<Dashboard2 />} />
-            <Route path="/manage-alerts" element={<ManageAlerts />} />
-            <Route path="/manage-guidelines" element={<ManageGuidelines />} />
-            <Route path="/manage-lost-found" element={<ManageLostFound />} />
-            <Route path="/emergency-contacts" element={<EmergencyContacts />} />
-            <Route path="/sos" element={<SOS />} />
-            <Route path="/admin-log" element={<AdminLog />} />
-            <Route path="/alerts" element={<Alerts />} />
-          </Routes>
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard-1" element={<Dashboard1 />} />
+        <Route path="/dashboard-2" element={<Dashboard2 />} />
+        <Route path="/manage-alerts" element={<ManageAlerts />} />
+        <Route path="/manage-guidelines" element={<ManageGuidelines />} />
+        <Route path="/manage-lost-found" element={<ManageLostFound />} />
+        <Route path="/emergency-contacts" element={<EmergencyContacts />} />
+        <Route path="/sos" element={<SOS />} />
+        <Route path="/admin-log" element={<AdminLog />} />
+        <Route path="/alerts" element={<Alerts />} />
+        <Route path="/verify-ml-alerts" element={<VerifyMLAlerts />} />
+        <Route path="/upload-data" element={<UploadData />} />
+        <Route path="/satellite-scan" element={<SatelliteScan />} />
+      </Routes>
+
         </div>
       </div>
     </Router>
