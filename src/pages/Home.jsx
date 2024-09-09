@@ -11,7 +11,7 @@ const Home = () => {
       </div>
       <div className="border rounded-lg overflow-hidden shadow-lg">
         <iframe
-          src="https://rsoe-edis.org/eventMap"
+          src="https://gis.wfp.org/adamlive/"
           title="Real-time Weather Information"
           width="100%"
           height="600px"
