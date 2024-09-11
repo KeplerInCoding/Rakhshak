@@ -77,8 +77,8 @@ const VerifyMLAlerts = () => {
       <div className="w-full max-w-4xl p-6 bg-white shadow-lg rounded-lg">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">Verify Machine Learning Alerts</h1>
         <p className="text-gray-600 mb-4">
-          This page displays and manages machine learning alerts. Review and manage the alerts below.
-        </p>
+        Get the predicted alerts from ML reviewed and manually verified local authorities. Check the status from them here.
+      </p>
 
         {/* Tab Navigation */}
         <div className="flex border-b mb-4">
