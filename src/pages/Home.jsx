@@ -6,7 +6,7 @@ const Home = () => {
       <div className="mb-6">
         <h2 className="text-2xl font-semibold text-gray-800">Welcome to the Admin Panel</h2>
         <p className="text-gray-600 mt-2">
-          Monitor and manage all aspects of the system from here.
+        Welcome to Rakshak — your one-stop hub for managing disaster response, preparedness, and recovery with efficiency, accuracy, and safety, bringing all the tools you need into one platform.
         </p>
       </div>
       <div className="border rounded-lg overflow-hidden shadow-lg">

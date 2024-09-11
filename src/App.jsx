@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
@@ -16,6 +16,8 @@ import SatelliteScan from './pages/SatelliteScan';
 import UploadData from './pages/UploadData';
 import VerifyMLAlerts from './pages/VerifyMLAlerts';
 import Login from './pages/auth/Login';
+import AlertsToPeople from './pages/AlertsToPeople';
+import RedZonesManagement from './pages/RedZonesManagement';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -53,6 +55,8 @@ function App() {
                 <Route path="/verify-ml-alerts" element={<VerifyMLAlerts />} />
                 <Route path="/upload-data" element={<UploadData />} />
                 <Route path="/satellite-scan" element={<SatelliteScan />} />
+                <Route path="/alert-to-public" element={<AlertsToPeople />} />
+                <Route path="/red-zones-management" element={<RedZonesManagement />} />
               </Routes>
             </div>
           </>

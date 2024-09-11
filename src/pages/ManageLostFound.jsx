@@ -226,103 +226,105 @@ const ManageLostFound = () => {
         </div>
 
         {isModalOpen && (
-          <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
-              <h2 className="text-2xl font-semibold mb-4">{currentPerson ? 'Edit Person' : 'Add Person'}</h2>
-              <form onSubmit={handleFormSubmit}>
-                <div className="mb-4">
-                  <label className="block text-gray-700">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    onChange={handleFormChange}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
-                    required
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700">Last Seen / Found At</label>
-                  <input
-                    type="datetime-local"
-                    name="lastSeen"
-                    value={form.lastSeen}
-                    onChange={handleFormChange}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
-                    required={!form.foundAt}
-                  />
-                  <input
-                    type="datetime-local"
-                    name="foundAt"
-                    value={form.foundAt}
-                    onChange={handleFormChange}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
-                    required={!!form.foundAt}
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700">Place</label>
-                  <input
-                    type="text"
-                    name="place"
-                    value={form.place}
-                    onChange={handleFormChange}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
-                    required
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700">Description</label>
-                  <textarea
-                    name="description"
-                    value={form.description}
-                    onChange={handleFormChange}
-                    rows="3"
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
-                    required
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700">Contact</label>
-                  <input
-                    type="text"
-                    name="contact"
-                    value={form.contact}
-                    onChange={handleFormChange}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
-                    required
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700">Picture URL</label>
-                  <input
-                    type="text"
-                    name="pictureUrl"
-                    value={form.pictureUrl}
-                    onChange={handleFormChange}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
-                    required
-                  />
-                </div>
-                <div className="flex justify-end space-x-4">
-                  <button
-                    type="button"
-                    onClick={() => setIsModalOpen(false)}
-                    className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
-                  >
-                    Save
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        )}
+  <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white rounded-lg shadow-lg p-7 w-full max-w-md max-h-screen overflow-y-auto">
+      <h2 className="text-2xl font-semibold mb-4">
+        {currentPerson ? 'Edit Person' : 'Add Person'}
+      </h2>
+      <form onSubmit={handleFormSubmit}>
+        <div className="mb-4">
+          <label className="block text-gray-700">Name</label>
+          <input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleFormChange}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Last Seen / Found At</label>
+          <input
+            type="datetime-local"
+            name="lastSeen"
+            value={form.lastSeen}
+            onChange={handleFormChange}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
+            required={!form.foundAt}
+          />
+          <input
+            type="datetime-local"
+            name="foundAt"
+            value={form.foundAt}
+            onChange={handleFormChange}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
+            required={!!form.foundAt}
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Place</label>
+          <input
+            type="text"
+            name="place"
+            value={form.place}
+            onChange={handleFormChange}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Description</label>
+          <textarea
+            name="description"
+            value={form.description}
+            onChange={handleFormChange}
+            rows="3"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Contact</label>
+          <input
+            type="text"
+            name="contact"
+            value={form.contact}
+            onChange={handleFormChange}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Picture URL</label>
+          <input
+            type="text"
+            name="pictureUrl"
+            value={form.pictureUrl}
+            onChange={handleFormChange}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50"
+            required
+          />
+        </div>
+        <div className="flex justify-end space-x-4">
+          <button
+            type="button"
+            onClick={() => setIsModalOpen(false)}
+            className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
+          >
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+)}
       </div>
     </div>
   );

@@ -1,12 +1,25 @@
 // src/pages/AdminLog.jsx
-import React from 'react';
+// import React from 'react';
 
 const logs = [
-  { id: 1, timestamp: '2024-09-09 14:32:00', user: 'Admin1', action: 'Login', details: 'Successful login' },
-  { id: 2, timestamp: '2024-09-09 14:45:12', user: 'Admin2', action: 'Update', details: 'Updated alert settings' },
-  { id: 3, timestamp: '2024-09-09 15:10:25', user: 'Admin1', action: 'Logout', details: 'User logged out' },
-  // Add more log data as needed
+  { id: 15, timestamp: '2024-09-09 16:15:20', user: 'NDRF', action: 'Deploy', details: 'Evacuation teams deployed to coastal regions of Odisha' },
+  { id: 14, timestamp: '2024-09-09 15:32:40', user: 'IMD', action: 'Update', details: 'Severe weather warning updated for Odisha' },
+  { id: 13, timestamp: '2024-09-09 15:10:25', user: 'NDMA', action: 'Logout', details: 'User logged out after reviewing alerts' },
+  { id: 12, timestamp: '2024-09-09 14:45:12', user: 'MoEFCC', action: 'Update', details: 'Updated wildfire risk for Madhya Pradesh region' },
+  { id: 11, timestamp: '2024-09-09 14:32:00', user: 'NDMA', action: 'Login', details: 'Successful login to the disaster management dashboard' },
+  { id: 10, timestamp: '2024-09-09 14:10:00', user: 'IMD', action: 'Send Alert', details: 'Tsunami alert sent to coastal Tamil Nadu following earthquake' },
+  { id: 9, timestamp: '2024-09-09 13:45:15', user: 'NDRF', action: 'Deploy', details: 'Search and rescue teams sent to landslide-affected areas in Himachal Pradesh' },
+  { id: 8, timestamp: '2024-09-09 13:00:50', user: 'MoES', action: 'Update', details: 'Earthquake risk assessment report updated for Gujarat' },
+  { id: 7, timestamp: '2024-09-09 12:45:33', user: 'NDMA', action: 'Send Alert', details: 'Heatwave alert sent to Rajasthan authorities' },
+  { id: 6, timestamp: '2024-09-09 12:12:00', user: 'IMD', action: 'Update', details: 'Updated heatwave alert for Rajasthan region' },
+  { id: 5, timestamp: '2024-09-09 11:30:45', user: 'NDRF', action: 'Deploy', details: 'NDRF teams deployed to flood-affected areas in Assam' },
+  { id: 4, timestamp: '2024-09-09 10:45:00', user: 'CWC', action: 'Update', details: 'Issued flood warning for Assam due to heavy rainfall' },
+  { id: 3, timestamp: '2024-09-09 10:10:12', user: 'NDMA', action: 'Send Alert', details: 'Cyclone alert sent to West Bengal local authorities' },
+  { id: 2, timestamp: '2024-09-09 09:15:30', user: 'IMD', action: 'Update', details: 'Updated cyclone forecast for Bay of Bengal region' },
+  { id: 1, timestamp: '2024-09-09 08:45:00', user: 'NDMA', action: 'Login', details: 'Successful login to alert management system' },
 ];
+
+
 
 const AdminLog = () => {
   return (
